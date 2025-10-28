@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>IMU統合 PDR+EKF デモ</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <style>
+    body { margin:0; font-family: sans-serif; background:#000; color:#fff; }
+    #map { position: absolute; top:0; right:0; width:40%; height:50%; z-index:3; }
+    #camera { position:absolute; width:60%; height:100%; left:0; top:0; object-fit:cover; z-index:0; background:black; }
+    #panel { position:absolute; top:10px; left:10px; z-index:4; background:rgba(0,0,0,0.7); padding:10px; border-radius:6px; max-width:34%; }
+    #image { width:200px; height:200px; object-fit:contain; display:block; margin-top:8px; background:#111; }
+    .btn { margin:6px 4px; padding:8px 10px; border-radius:6px; border:none; background:#1976d2; color:white; cursor:pointer; }
+    #log { max-height:120px; overflow:auto; font-size:12px; color:#eee; background:#111; padding:6px; margin-top:6px; border-radius:4px; }
+  </style>
+</head>
+<body>
+  <video id="camera" autoplay playsinline muted></video>
+  <div id="map"></div>
+
+  <div id="panel">
+    <div id="info">初期化待ち... QRパラメータがあれば ?lat=...,lon=... を付与してください。</div>
+    <img id="image" src="" alt="スポット画像" />
+    <div style="margin-top:8px;">
+      <button id="startBtn" class="btn">避難開始</button>
+      <button id="nextBtn" class="btn" style="display:none;">このスポットは完了</button>
+      <button id="patternBtn" class="btn" style="display:none;">言語切替</button>
+    </div>
+    <div id="log"></div>
+  </div>
+
+  <audio id="audio" src=""></audio>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="scripts/madgwick.js"></script>
+  <script src="scripts/ekf.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
