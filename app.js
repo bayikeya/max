@@ -2,10 +2,13 @@
 
 // ---- configuration ----
 const spots = [
-  { name: "13号館前", lat: 35.69302425885399, lon: 140.0508424409975, radius: 8, images:["image0.jpeg","image1.jpeg"], audio:{A:"spot1.ja.mp3",B:"spot1.en.mp3"} },
-  { name: "曲がり角右", lat: 35.69283234340133, lon: 140.05091587321536, radius: 8, images:["image3.jpeg"], audio:{A:"spot2.ja.mp3",B:"spot2.en.mp3"} },
-  { name: "目的地", lat: 35.693014464267506, lon: 140.0509410980045, radius: 8, images:["image7.jpeg"], audio:{A:"spot3.ja.mp3",B:"spot3.en.mp3"} }
-];
+            { name: "13号館前", lat: 35.69302425885399, lon: 140.0508424409975, radius: 0, images: ["image0.jpeg", "image1.jpeg"], audio: { A: "spot1.ja.mp3", B: "spot1.en.mp3", C: "spot1.ch.mp3" } },
+            { name: "曲がり角右", lat: 35.69283234340133, lon: 140.05091587321536, radius: 20, images: ["image3.jpeg", "image11.jpeg"], audio: { A: "spot3,4.ja.mp3", B: "spot3,4.en.mp3", C: "spot3,4.ch.mp3" } },
+            { name: "曲がり角右１", lat: 35.69286877921128, lon: 140.05030279528978, radius: 20, images: ["image4.jpeg", "image13.jpeg"], audio: { A: "spot3,4.ja.mp3", B: "spot3,4.en.mp3", C: "spot3,4.ch.mp3" } },
+            { name: "曲がり角右２", lat: 35.69334894066289, lon: 140.05033682451656, radius: 20, images: ["image5.jpeg", "image14.jpeg"], audio: { A: "spot5,6.ja.mp3", B: "spot5,6.en.mp3", C: "spot5,6.ch.mp3" } },
+            { name: "曲がり角右３", lat: 35.69331981781718, lon: 140.05102244720183, radius: 20, images: ["image6.jpeg", "image15.jpeg"], audio: { A: "spot5,6.ja.mp3", B: "spot5,6.en.mp3", C: "spot5,6.ch.mp3" } },
+            { name: "目的地", lat: 35.693014464267506, lon: 140.0509410980045, radius: 20, images: ["image7.jpeg", "image16.jpeg"], audio: { A: "spot7,8.ja.mp3", B: "spot7,8.en.mp3", C: "spot7,8.ch.mp3" } }
+        ];
 // ------------------------
 
 const camera = document.getElementById('camera');
